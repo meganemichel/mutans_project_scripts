@@ -1,3 +1,4 @@
-## README
+## *S. mutans* project
 
-Test
+Repository containing scripts and data used in the analysis of ancient *Streptococcus mutans* genomes.
+### Citation
