@@ -1,0 +1,510 @@
+---
+title: "Pangenome mutans"
+output: html_notebook
+---
+#Required libraries
+```{r}
+library(tidyr)
+library(tidyverse)
+library(ggplot2)
+library(ggpubr)
+```
+
+#Reading metadata and presence/absence matrix
+```{r}
+mutans_metadata <- read.csv(file = "../Data/Metadata_pangenome_analysis.csv")
+
+PA_matrix_true <- read.delim(file = "../Data/roary_95_ancientAssemblies_gene_presence_absence.Rtab")
+
+PA_matrix_true_t <- PA_matrix_true[,-1]
+rownames(PA_matrix_true_t) <- PA_matrix_true[,1]
+PA_matrix_true_t <- t(PA_matrix_true_t)
+
+PA_matrix <- read.delim(file = "../Data/roary_95_ancientAssemblies_gene_presence_absence.Rtab") %>%
+  gather(Genome, Condition, 2:ncol(PA_matrix_true)) %>%
+  filter(Condition != "0")
+
+```
+#Basic statistics
+```{r}
+geneGenome <- PA_matrix %>%
+  group_by(Genome) %>%
+  summarise(Genes=n())
+
+geneCount <- PA_matrix %>%
+  left_join(mutans_metadata, by = c("Genome" = "Assembly")) %>%
+  group_by(Gene) %>%
+  summarise(Total = sum(Condition)) %>%
+  mutate(GeneType =
+           case_when(
+             Total > (493*0.95) ~ "Core genes",
+             Total < (493*0.15) ~ "Cloud genes",
+             .default = "Shell genes"
+           )
+         )
+
+geneCountSpecies <- PA_matrix %>%
+  left_join(mutans_metadata, by = c("Genome" = "Assembly")) %>%
+  group_by(Gene,Age) %>%
+  summarise(Total = sum(Condition)) %>%
+  mutate(GeneType =
+           case_when(
+             Total >= 34 & Age == "Ancient" ~ "Core genes",
+             Total > (457*0.95) & Age == "Modern" ~ "Core genes", 
+             Total < (36*0.15) & Age == "Ancient" ~ "Cloud genes",
+             Total < (457*0.15) & Age == "Modern" ~ "Cloud genes",
+             .default = "Shell genes"
+           )
+         )
+
+geneCountSpecies_90complete <- PA_matrix %>%
+  left_join(mutans_metadata, by = c("Genome" = "Assembly")) %>%
+  filter(Completeness >=90 | is.na(Completeness)) %>%
+  group_by(Gene,Age) %>%
+  summarise(Total = sum(Condition)) %>%
+  mutate(GeneType =
+           case_when(
+             Total >= 29 & Age == "Ancient" ~ "Core genes",
+             Total > (457*0.95) & Age == "Modern" ~ "Core genes", 
+             Total < (31*0.15) & Age == "Ancient" ~ "Cloud genes",
+             Total < (457*0.15) & Age == "Modern" ~ "Cloud genes",
+             .default = "Shell genes"
+           )
+         )
+
+genePresent5Percent <- PA_matrix %>%
+  group_by(Gene) %>%
+  summarise(Total = sum(Condition))  %>%
+  mutate(Percentage = Total/492*100) %>%
+  filter(Percentage >= 15)
+  
+geneCountSpecies %>%
+  group_by(Age,GeneType) %>%
+  summarise(GeneTotal = n()) %>%
+ggplot(aes(x=GeneType, y=GeneTotal, fill = Age)) +
+  geom_bar(position= "dodge", stat="identity") +
+  labs(color = "Age", x = "Age", y = "Total gene count/genome") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle=45,hjust=1), 
+        legend.position="right")
+
+geneCountSpecies_90complete %>%
+  group_by(Age,GeneType) %>%
+  summarise(GeneTotal = n()) %>%
+ggplot(aes(x=GeneType, y=GeneTotal, fill = Age)) +
+  geom_bar(position= "dodge", stat="identity") +
+  labs(color = "Age", x = "Age", y = "Total gene count/genome") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle=45,hjust=1), 
+        legend.position="right")
+
+coreGenesAll <- geneCount %>% filter(GeneType == "Core genes")
+coreGenesShared <- geneCountSpecies %>% filter(GeneType == "Core genes") %>% group_by(Gene) %>% summarise(total = n()) %>% filter(total == 2) %>% filter(Gene %in% coreGenesAll$Gene)
+nonCoreAncient <- geneCountSpecies_90complete %>% filter(Age == "Ancient") %>% filter(Gene %in% coreGenesAll$Gene) %>% filter(!Gene %in% coreGenesShared$Gene)
+```
+
+# Probes_coverage
+```{r}
+info_breath_coverage <- read.delim("../Data/probes_chipA_chipB_combined_rmdup.breadth", header = FALSE, col.names = c("Gene_roary", "Start", "End", "Nr_features", "Bases_cov","Length", "Percent_coverage" )) %>% select(Gene_roary, Length, Percent_coverage)
+
+info_depth_coverage <- read.delim("../Data/probes_chipA_chipB_combined_rmdup.depth",header = FALSE, col.names = c("Gene_roary","Start", "End", "Depth_coverage")) %>% select(Gene_roary, Depth_coverage)
+
+gene_presence_absence_csv <- read.csv(file = "../Data/gene_presence_absence.csv") %>%
+  gather(Genome, Gene_roary, 15:507) %>%
+  separate(Gene_roary, sep = "\t", c("Gene_roary","Gene_roary_duplicate", "Gene_roary_duplicate_2", "Gene_roary_duplicate_3", "Gene_roary_duplicate_4", "Gene_roary_duplicate_5", "Gene_roary_duplicate_6", "Gene_roary_duplicate_7", "Gene_roary_duplicate_8")) %>%
+  filter(Gene_roary !="")
+
+info_depth_breath_cov <- info_depth_coverage %>% full_join(info_breath_coverage) %>%
+  left_join(gene_presence_absence_csv)
+  
+nocoverage_probes <- info_depth_breath_cov %>% 
+  filter(Percent_coverage < 0.9) %>% 
+  left_join(geneCountSpecies)
+
+onlypresentonce <- nocoverage_probes %>% 
+  group_by(Gene_roary) %>% 
+  summarise(Total= n()) %>% 
+  filter(Total == 1)
+
+nocoverage_probes_notinancientassemblies <- nocoverage_probes %>%
+  filter(Gene_roary %in% onlypresentonce$Gene_roary) %>%
+  filter(Age == "Modern")
+
+nocoverage_probes %>%
+  ggplot(aes(x = Percent_coverage, group = GeneType)) +
+  geom_histogram(bins = 100) +
+  facet_wrap( ~ GeneType)
+
+nocoverage_probes %>%
+  ggplot(aes(x = No..isolates)) +
+  geom_histogram(bins = 100)
+```
+
+#Reading mapping coverage (breadth and depth) ancient genomes
+```{r}
+ancient_genomes_assembly <- mutans_metadata %>% 
+  filter(Age == "Ancient")
+ancientGenomes_5X <- read.delim("../Data/metadata_ancient_genomes_coverage.csv", sep = ",")
+depth_coverage_ancient <- read_delim(file = "../Data/pangenome_mutans.depth.bed", col_names = c("Genome_ancient","Gene_roary","start","end","depth"))
+
+breadth_coverage_ancient <- read_delim(file = "../Data/pangenome_mutans.breadth.bed", col_names = c("Genome_ancient","Gene_roary","breadth"))
+
+depth_breadth_coverage_ancient <- depth_coverage_ancient %>% left_join(breadth_coverage_ancient) %>%
+  left_join(gene_presence_absence_csv)
+
+ancient_breadth_depth_cov <- depth_breadth_coverage_ancient %>%
+  filter(Genome_ancient %in% ancientGenomes_5X$Genome) %>%
+  left_join(ancientGenomes_5X) %>%
+  mutate(depth_corrected = depth/Mean_coverage,
+         Expected_coverage = (1-exp(-0.883*Mean_coverage)))
+
+ancient_breadth_depth_cov_filtered <- ancient_breadth_depth_cov %>% 
+  mutate(Condition = case_when(breadth >= Depth_cov_1X/100 & depth_corrected >= 0.5 & depth_corrected < 1.25 ~ 1, .default = 0)#,
+         #Condition2 = case_when(breadth >= Expected_coverage & depth_corrected >= 0.5 & depth_corrected < 1.25 ~ 1, .default = 0)
+         )
+
+PA_matrix_anc_mapped <- ancient_breadth_depth_cov_filtered %>% 
+  filter(Condition != 0) %>%
+  select(Gene, Genome_ancient, Condition) %>%
+  rename(Genome = Genome_ancient, 
+         #Condition = Condition2
+         ) %>%
+  rbind(PA_matrix)
+
+map_assem_code <- read.delim("../Data/strain_assembly.csv", sep = ",")
+
+PA_matrix_only_ancient <- PA_matrix_anc_mapped %>% 
+  filter(grepl("SM1|MEGAHIT|KGH2|PAN0",Genome)) %>%
+  left_join(map_assem_code) %>%
+  left_join(ancientGenomes_5X, by = c("Strain"="Genome_ancient"))
+
+geneCountMapping <- PA_matrix_only_ancient %>%
+  filter(!is.na(Assembly_name)) %>%
+  group_by(Genome) %>%
+  summarise(geneCount = sum(Condition)) %>%
+  left_join(map_assem_code) %>%
+#  left_join(geneGenome) %>%
+  left_join(ancientGenomes_5X, by = c("Strain"="Genome_ancient"))
+
+geneCountMappingAssembled <-PA_matrix_only_ancient %>%
+  filter(!is.na(Assembly_name)) %>%
+  group_by(Genome) %>%
+  summarise(geneCount = sum(Condition)) %>%
+  left_join(map_assem_code) %>%
+  left_join(ancientGenomes_5X, by = c("Strain"="Genome_ancient")) %>%
+  filter(Assembly_name != "")
+
+geneCountStrain <- PA_matrix_only_ancient %>%
+  filter(!is.na(Assembly_name)) %>%
+  group_by(Strain, Gene) %>%
+  summarise(geneCountTotal = sum(Condition)) %>%
+  mutate(geneCountCorrected = 1) %>%
+  group_by(Strain) %>%
+  summarise(geneCount = sum(geneCountCorrected)) %>%
+  mutate(Type = "Merged") %>%
+  left_join(ancientGenomes_5X, by = c("Strain"="Genome_ancient")) %>%
+  select(Strain, geneCount, Type, Strain_mixture)
+
+geneCountStrainAssembled <- PA_matrix_only_ancient %>%
+  filter(!is.na(Assembly_name)) %>%
+  group_by(Strain, Gene) %>%
+  summarise(geneCountTotal = sum(Condition)) %>%
+  mutate(geneCountCorrected = 1) %>%
+  group_by(Strain) %>%
+  summarise(geneCount = sum(geneCountCorrected)) %>%
+  mutate(Type = "Ancient Merged") %>%
+  left_join(ancientGenomes_5X, by = c("Strain"="Genome_ancient")) %>%
+  filter(Assembly_name != "") %>%
+  select(Strain, geneCount, Type, Strain_mixture)
+
+diff_geneCount_ass_map <- geneCountMapping %>%
+  group_by(Strain) %>%
+  summarise(Difference_genes = abs(diff(geneCount))) %>%
+  left_join(ancientGenomes_5X, by = c("Strain"="Genome_ancient")) %>%
+  left_join(mutans_metadata)
+
+diff_geneCount_ass_map %>%
+  ggplot(aes(x=Mean_coverage, y=Difference_genes, colour = Proportion_Het_SNPs)) +
+  geom_point(aes(shape=Strain_mixture)) +
+  facet_wrap( ~ Strain_mixture)
+
+diff_geneCount_ass_map %>%
+  ggplot(aes(x=Proportion_Het_SNPs, y=Difference_genes, colour = Strain_mixture)) +
+  geom_point(aes(shape=Strain_mixture))
+  
+
+geneCountMapping %>%
+  select(Strain, geneCount, Type, Strain_mixture) %>%
+  rbind(geneCountStrain) %>%
+  ggplot(aes(x=Strain, y=geneCount, colour = Strain_mixture)) +
+  geom_point(aes(shape=Type)) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+```
+
+#Differing genes
+```{r}
+
+differingGenes <- geneCountSpecies %>%
+  group_by(Gene) %>%
+  summarise(count=n()) %>%
+  filter(count == 1)
+
+differingCoreGenes <- geneCountSpecies %>%
+  filter(GeneType == "Core genes") %>%
+  group_by(Gene) %>%
+  summarise(count=n()) %>%
+  filter(count == 1)
+
+differingGenes_90complete <- geneCountSpecies_90complete %>%
+  group_by(Gene) %>%
+  summarise(count=n()) %>%
+  filter(count == 1)
+
+differingCoreGenes_90complete <- geneCountSpecies_90complete %>%
+  filter(GeneType == "Core genes") %>%
+  group_by(Gene) %>%
+  summarise(count=n()) %>%
+  filter(count == 1)
+
+CoreAncient <- geneCountSpecies_90complete %>%
+  filter(Gene %in% differingCoreGenes_90complete$Gene) %>%
+  filter(Age == "Ancient" & GeneType == "Core genes")
+
+geneCountSpecies %>% filter(Gene %in% CoreAncient$Gene) %>% filter(Age == "Modern")
+
+CoreModern <- geneCountSpecies_90complete %>%
+  filter(Gene %in% differingCoreGenes_90complete$Gene) %>%
+  filter(Age == "Modern" & GeneType == "Core genes") %>%
+  left_join(info_depth_breath_cov)
+```
+
+#Figures
+##Correlation between number of genes vs contamination vs coverage to ref.
+```{r}
+DataGenesStats <- geneGenome %>%
+  left_join(mutans_metadata, by = c("Genome" = "Assembly")) %>%
+  filter(!is.na(Completeness)) %>%
+  left_join(ancientGenomes_5X, by = c("Strain" = "Genome_ancient"))
+
+genesvscompleteness <- DataGenesStats %>%
+  ggplot(aes(x=Genes, y=Completeness, colour = Contamination)) +
+  geom_point(aes(shape=Data)) +
+  theme_light() #+
+  #theme(legend.position = "none", plot.margin = margin(r=0))
+
+genesvsmeancoverage <- DataGenesStats %>%
+  ggplot(aes(x=Genes, y= Mean_coverage, colour = Contamination)) +
+  geom_point(aes(shape=Data)) +
+  ylab("Mean Coverage") +
+  theme_light()
+
+
+genesvscompletenessStrain <- DataGenesStats %>%
+  ggplot(aes(x=Genes, y=Completeness, colour = Strain_mixture)) +
+  geom_point(aes(shape=Data)) +
+  labs(colour = "Strain mixture?") +
+  theme_light() +
+  #theme(legend.position = "none") +
+  theme(legend.title = element_text(size = 10))#, #plot.margin = margin(r=0)) 
+
+genesvsmeancoverageStrain <- DataGenesStats %>%
+  ggplot(aes(x=Genes, y= Mean_coverage, colour = Strain_mixture)) +
+  geom_point(aes(shape=Data)) +
+  ylab("Mean Coverage") +
+  labs(colour = "Strain mixture?") +
+  theme_light() +
+  theme(legend.title = element_text(size = 10))
+
+genesvsdating_completeness <- DataGenesStats %>%
+  ggplot(aes(x=Genes, y=Completeness, colour = Dating)) +
+  geom_point(aes(shape=Data)) +
+  scale_colour_viridis_c() +
+  theme_light()
+  
+genesvsdating_meancov <- DataGenesStats %>%
+  ggplot(aes(x=Genes, y=Mean_coverage, colour = Dating)) +
+  geom_point(aes(shape=Data)) +
+  scale_colour_viridis_c() +
+  theme_light()
+
+
+legend_1 <- get_legend(genesvscompleteness)
+
+legend_2 <- get_legend(genesvscompletenessStrain)
+ 
+legend_3 <- get_legend(genesvsdating_completeness)
+
+legends <- ggarrange(legend_1, legend_2, legend_3, nrow = 3)
+
+
+rm_legend <- function(p){p + theme(legend.position = "none")}
+plots <- ggarrange(rm_legend(genesvscompleteness),
+                   rm_legend(genesvsmeancoverage),
+                   rm_legend(genesvscompletenessStrain),
+                   rm_legend(genesvsmeancoverageStrain),
+                   rm_legend(genesvsdating_completeness),
+                   rm_legend(genesvsdating_meancov),
+                    nrow = 3, ncol = 2, labels = c("A", "B","C","D", "E","F"), align = "hv")
+ggarrange(plots, legends, widths = c(0.75,0.25))
+ggarrange(plots, legends, widths = c(0.85,0.15))
+
+ggsave("../Figures/Supplemetary_Figure_4_geneCounts_ancient.pdf",device = "pdf", units = "cm", height = 25, width = 23)
+```
+##Barplot core vs accessory genes
+```{r}
+geneCountSpecies_90complete %>%
+  mutate(GeneType = ifelse(GeneType == "Core genes", "Core", "Accessory")) %>%
+  group_by(Age,GeneType) %>%
+  summarise(GeneTotal = n()) %>%
+ggplot(aes(x=Age, y=GeneTotal, fill = GeneType)) +
+  geom_bar(position= "fill", stat = "identity") +
+  labs(fill = "Gene Type", x = "", y = "Proportion of pangenome") +
+  theme_light() +
+  theme(legend.position="right") +
+  scale_x_discrete(labels= c("Ancient" = "Ancient\n(n=4,611)", "Modern" = "Modern\n(n=9,618)"))
+
+ggsave("../Figures/PanelD_normalised_Figure4_CorevsAccessory_ancientVSmodern.pdf", device = "pdf", units = "cm", height = 17, width = 15)
+
+geneCountSpecies_90complete %>%
+  mutate(GeneType = ifelse(GeneType == "Core genes", "Core", "Accessory")) %>%
+  group_by(Age,GeneType) %>%
+  summarise(GeneTotal = n()) %>%
+ggplot(aes(x=Age, y=GeneTotal, fill = GeneType)) +
+  geom_bar(position= "stack", stat = "identity") +
+  labs(fill = "Gene Type", x = "", y = "Proportion of pangenome") +
+  theme_light() +
+  theme(legend.position="right") +
+  scale_x_discrete(labels= c("Ancient" = "Ancient\n(n=36)", "Modern" = "Modern\n(n=457)"))
+
+ggsave("../Figures/PanelD_raw_Figure4_CorevsAccessory_ancientVSmodern.pdf", device = "pdf", units = "cm", height = 17, width = 15)
+
+geneCountSpecies_90complete %>%
+  filter(Age == "Ancient" & GeneType == "Core genes") %>%
+  filter(Gene %in% coreGenesAll$Gene) %>%
+  nrow()
+
+geneCountSpecies_90complete %>%
+  filter(Gene %in% coreGenesAll$Gene) %>%
+  filter(Age == "Ancient") %>%
+  group_by(GeneType) %>%
+  summarise(Total = n())
+
+nonCoreAncient_coreAll <- geneCountSpecies_90complete %>%
+  filter(Gene %in% coreGenesAll$Gene) %>%
+  filter(Age == "Ancient" & GeneType != "Core genes") %>%
+  mutate(Percentage = Total/31*100)
+
+mean(nonCoreAncient_coreAll$Percentage)
+sd(nonCoreAncient_coreAll$Percentage)
+  
+```
+##Box plots number genes
+```{r}
+
+modern_ancient90completenes <- mutans_metadata %>% 
+  filter(Age == "Modern" | Completeness > 90)
+
+#Boxplot without stats
+geneGenome %>%
+  mutate(Type = "Assembly") %>% 
+  rbind(geneCountStrainAssembled %>% 
+          select(Strain,geneCount, Type) %>% 
+          rename(Genome = Strain, Genes = geneCount)) %>% 
+  rbind(geneCountMappingAssembled %>% 
+          filter(Type == "Mapping") %>% 
+          select(Strain, geneCount, Type) %>% 
+          rename(Genome = Strain, Genes = geneCount)) %>%
+  left_join(mutans_metadata, by = c("Genome" = "Assembly")) %>%
+  mutate(Age = ifelse(is.na(Age), "Ancient", Age)) %>%
+  ggplot(aes(x=fct_infreq(Age), y=Genes, colour = Type)) +
+  geom_boxplot(outlier.colour="red",
+                outlier.size=1) +
+  stat_compare_means(comparisons =)
+  labs(color = "Age", x = "Age", y = "Total gene count/genome") +
+  theme_light() +
+  theme(axis.text.x = element_text(angle=45,hjust=1), 
+        legend.position="right")
+  #Complex boxplot with stats
+  geneGenome %>%
+  mutate(Type = "") %>% 
+  rbind(geneCountStrainAssembled %>% 
+          select(Strain,geneCount, Type) %>% 
+          rename(Genome = Strain, Genes = geneCount)) %>% 
+  rbind(geneCountMappingAssembled %>% 
+          filter(Type == "Ancient Mapping") %>% 
+          select(Strain, geneCount, Type) %>% 
+          rename(Genome = Strain, Genes = geneCount)) %>%
+  left_join(mutans_metadata, by = c("Genome" = "Assembly")) %>%
+    mutate(Type = case_when(
+      Age == "Modern" ~ "Assembly modern",
+      Age == "Ancient" & Type == "" ~ "Assembly ancient",
+      .default = Type
+    )) %>%
+  ggstatsplot::ggbetweenstats(x = Type, y = Genes, type = "r")
+ 
+  #Box plot with stats, with ancient >90% complete 
+  geneGenome %>%
+    mutate(Type = "") %>% 
+    rbind(geneCountStrainAssembled %>% 
+              select(Strain,geneCount, Type) %>% 
+              rename(Genome = Strain, Genes = geneCount)) %>% 
+    rbind(geneCountMappingAssembled %>% 
+              filter(Type == "Ancient Mapping") %>% 
+              select(Strain, geneCount, Type) %>% 
+              rename(Genome = Strain, Genes = geneCount)) %>%
+    left_join(mutans_metadata, by = c("Genome" = "Assembly")) %>%
+    mutate(Type = case_when(
+        Age == "Modern" ~ "Assembly modern",
+        Age == "Ancient" & Type == "" ~ "Assembly ancient",
+        .default = Type
+    )) %>% 
+    filter(Genome %in% modern_ancient90completenes$Assembly | Genome %in% modern_ancient90completenes$Strain | grepl("PAN0",Genome)) %>%
+    ggstatsplot::ggbetweenstats(x = Type, y = Genes, type = "r")
+
+  ggsave("../Figures/Supplementary_figure_3_genomesize_comparison.pdf", device = "pdf", units = "cm", height = 15, width = 23)
+```
+##Genes differing between assembly and mapping
+```{r}
+diff_genes_assembly_mapping <- PA_matrix_only_ancient %>%
+  filter(Assembly_name != "") %>%
+  group_by(Gene,Assembly_name) %>%
+  summarise(total = sum(Condition)) %>%
+  group_by(Gene, total) %>%
+  summarise(concordance = n()) %>%
+  spread(total, concordance) %>%
+  filter(!is.na(`1`)) %>%
+  mutate(Proportion_concordance = `2`/(`1`+`2`)) %>%
+  left_join(geneCount %>% select(Gene, GeneType))
+
+geneFound1methodGenome <- diff_genes_assembly_mapping %>% 
+  filter(is.na(Proportion_concordance)) %>% 
+  left_join(PA_matrix_only_ancient) %>% 
+  filter(Assembly_name != "") %>% 
+  group_by(Gene,Type) %>% 
+  summarise(Total = n()) %>% 
+  left_join(geneCount %>% 
+              select(Gene, GeneType))
+
+genesFoundOnly1method <- geneFound1methodGenome %>% 
+  group_by(Gene) %>% 
+  summarise(total = n()) %>% 
+  filter(total == 1) %>% 
+  select(Gene)
+
+#geneFound1methodGenome %>% 
+#  filter(Gene %in% genesFoundOnly1method$Gene) %>% 
+#  group_by(Type, GeneType) %>%
+#  summarise(geneCount = n()) +
+#  ggplot(aes(x=GeneType, y=GeneTotal, fill = Age)) +
+#  geom_bar(position= "dodge", stat="identity") +
+#  labs(color = "Age", x = "Age", y = "Total gene count/genome") +
+#  theme_bw() +
+#  theme(axis.text.x = element_text(angle=45,hjust=1), 
+        legend.position="right")
+
+ancient_breadth_depth_cov %>% filter(Gene %in% genesFoundOnly1method$Gene) %>% 
+  left_join(geneCount %>% 
+              select(Gene, GeneType)) %>%
+  filter(GeneType == "Core genes")
+```
