@@ -37,8 +37,8 @@ geneCount <- PA_matrix %>%
   summarise(Total = sum(Condition)) %>%
   mutate(GeneType =
            case_when(
-             Total > (493*0.95) ~ "Core genes",
-             Total < (493*0.15) ~ "Cloud genes",
+             Total > (492*0.95) ~ "Core genes",
+             Total < (492*0.15) ~ "Cloud genes",
              .default = "Shell genes"
            )
          )
@@ -49,10 +49,10 @@ geneCountSpecies <- PA_matrix %>%
   summarise(Total = sum(Condition)) %>%
   mutate(GeneType =
            case_when(
-             Total >= 34 & Age == "Ancient" ~ "Core genes",
-             Total > (457*0.95) & Age == "Modern" ~ "Core genes", 
-             Total < (36*0.15) & Age == "Ancient" ~ "Cloud genes",
-             Total < (457*0.15) & Age == "Modern" ~ "Cloud genes",
+             Total >= 33 & Age == "Ancient" ~ "Core genes",
+             Total > (456*0.95) & Age == "Modern" ~ "Core genes", 
+             Total < (35*0.15) & Age == "Ancient" ~ "Cloud genes",
+             Total < (456*0.15) & Age == "Modern" ~ "Cloud genes",
              .default = "Shell genes"
            )
          )
@@ -65,9 +65,9 @@ geneCountSpecies_90complete <- PA_matrix %>%
   mutate(GeneType =
            case_when(
              Total >= 29 & Age == "Ancient" ~ "Core genes",
-             Total > (457*0.95) & Age == "Modern" ~ "Core genes", 
+             Total > (456*0.95) & Age == "Modern" ~ "Core genes", 
              Total < (31*0.15) & Age == "Ancient" ~ "Cloud genes",
-             Total < (457*0.15) & Age == "Modern" ~ "Cloud genes",
+             Total < (456*0.15) & Age == "Modern" ~ "Cloud genes",
              .default = "Shell genes"
            )
          )
@@ -75,7 +75,7 @@ geneCountSpecies_90complete <- PA_matrix %>%
 genePresent5Percent <- PA_matrix %>%
   group_by(Gene) %>%
   summarise(Total = sum(Condition))  %>%
-  mutate(Percentage = Total/492*100) %>%
+  mutate(Percentage = Total/491*100) %>%
   filter(Percentage >= 15)
   
 geneCountSpecies %>%
@@ -359,10 +359,11 @@ geneCountSpecies_90complete %>%
   summarise(GeneTotal = n()) %>%
 ggplot(aes(x=Age, y=GeneTotal, fill = GeneType)) +
   geom_bar(position= "fill", stat = "identity") +
+  scale_fill_manual(values = c("#b5e6e6ff","#8362b7ff")) +
   labs(fill = "Gene Type", x = "", y = "Proportion of pangenome") +
   theme_light() +
   theme(legend.position="right") +
-  scale_x_discrete(labels= c("Ancient" = "Ancient\n(n=4,611)", "Modern" = "Modern\n(n=9,618)"))
+  scale_x_discrete(labels= c("Ancient" = "Ancient\n(n=4,580)", "Modern" = "Modern\n(n=9,636)"))
 
 ggsave("../Figures/PanelD_normalised_Figure4_CorevsAccessory_ancientVSmodern.pdf", device = "pdf", units = "cm", height = 17, width = 15)
 
@@ -372,10 +373,11 @@ geneCountSpecies_90complete %>%
   summarise(GeneTotal = n()) %>%
 ggplot(aes(x=Age, y=GeneTotal, fill = GeneType)) +
   geom_bar(position= "stack", stat = "identity") +
+  scale_fill_manual(values = c("#b5e6e6ff","#8362b7ff")) +
   labs(fill = "Gene Type", x = "", y = "Proportion of pangenome") +
   theme_light() +
   theme(legend.position="right") +
-  scale_x_discrete(labels= c("Ancient" = "Ancient\n(n=36)", "Modern" = "Modern\n(n=457)"))
+  scale_x_discrete(labels= c("Ancient" = "Ancient\n(n=31)", "Modern" = "Modern\n(n=456)"))
 
 ggsave("../Figures/PanelD_raw_Figure4_CorevsAccessory_ancientVSmodern.pdf", device = "pdf", units = "cm", height = 17, width = 15)
 

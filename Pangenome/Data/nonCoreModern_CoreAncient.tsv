@@ -1,0 +1,75 @@
+Gene	Avg.sequences.per.isolate	Annotation	Total	GeneType
+acoA_2	1	Acetoin:2,6-dichlorophenolindophenol oxidoreductase subunit alpha	377	Shell genes
+arcB	1	Ornithine carbamoyltransferase, catabolic	412	Shell genes
+arlR_3	1	Response regulator ArlR	399	Shell genes
+comEC	1	ComE operon protein 3	390	Shell genes
+dnaI	1	Primosomal protein DnaI	417	Shell genes
+feoB	1	Fe(2+) transporter FeoB	374	Shell genes
+ftsX	1	Cell division protein FtsX	247	Shell genes
+galK_2	1	Galactokinase	324	Shell genes
+gmuE	1	Putative fructokinase	406	Shell genes
+group_10316	1	hypothetical protein	429	Shell genes
+group_10632	1.01	Citrate lyase subunit beta	185	Shell genes
+group_1071	1.08	hypothetical protein	400	Shell genes
+group_1212	1	hypothetical protein	343	Shell genes
+group_1274	1	hypothetical protein	416	Shell genes
+group_1564	1	hypothetical protein	422	Shell genes
+group_1603	1	hypothetical protein	300	Shell genes
+group_1910	1	hypothetical protein	338	Shell genes
+group_2006	1	Phosphoglycolate phosphatase	402	Shell genes
+group_2077	1	Manganese ABC transporter substrate-binding lipoprotein	18	Cloud genes
+group_2102	1	hypothetical protein	191	Shell genes
+group_2423	1	hypothetical protein	378	Shell genes
+group_2616	1.01	Apo-citrate lyase phosphoribosyl-dephospho-CoA transferase	128	Shell genes
+group_2730	1	hypothetical protein	408	Shell genes
+group_2779	1	hypothetical protein	400	Shell genes
+group_3030	1	putative ABC transporter ATP-binding protein	430	Shell genes
+group_3179	1	hypothetical protein	409	Shell genes
+group_3520	1	hypothetical protein	416	Shell genes
+group_4125	1	FAD:protein FMN transferase	51	Cloud genes
+group_4131	1	hypothetical protein	96	Shell genes
+group_4363	1	hypothetical protein	427	Shell genes
+group_4379	1	hypothetical protein	332	Shell genes
+group_4502	1.01	hypothetical protein	188	Shell genes
+group_4541	1	L-cystine transport system permease protein YecS	35	Cloud genes
+group_4585	1	hypothetical protein	411	Shell genes
+group_4733	1	putative protein	242	Shell genes
+group_4951	1	Cyclic-di-AMP phosphodiesterase GdpP	205	Shell genes
+group_508	1	hypothetical protein	407	Shell genes
+group_5193	1.01	hypothetical protein	189	Shell genes
+group_5490	1	hypothetical protein	390	Shell genes
+group_557	1	putative oxidoreductase/MSMEI_2347	74	Shell genes
+group_601	1	hypothetical protein	402	Shell genes
+group_6625	1	hypothetical protein	229	Shell genes
+group_6707	1	putative dihydroorotate dehydrogenase A (fumarate)	123	Shell genes
+group_6728	1	Protein SprT-like protein	228	Shell genes
+group_828	1	hypothetical protein	381	Shell genes
+group_894	1	hypothetical protein	195	Shell genes
+group_9886	1.01	Glutaconyl-CoA decarboxylase subunit beta	190	Shell genes
+hemH	1	Ferrochelatase	383	Shell genes
+hisD	1	Histidinol dehydrogenase	232	Shell genes
+hisI	1	Phosphoribosyl-AMP cyclohydrolase	400	Shell genes
+hprK	1	HPr kinase/phosphorylase	229	Shell genes
+lacD	1	Tagatose 1,6-diphosphate aldolase	430	Shell genes
+manA	1	Mannose-6-phosphate isomerase ManA	407	Shell genes
+msrC	1	Free methionine-R-sulfoxide reductase	407	Shell genes
+nadE_2	1	hypothetical protein	419	Shell genes
+nagR	1	HTH-type transcriptional repressor NagR	393	Shell genes
+oxdC	1	Oxalate decarboxylase OxdC	343	Shell genes
+prfB	1	Peptide chain release factor 2	378	Shell genes
+ptsG	1	PTS system glucose-specific EIICBA component	368	Shell genes
+purA	1	Adenylosuccinate synthetase	389	Shell genes
+rplD	1	50S ribosomal protein L4	374	Shell genes
+rplW	1	50S ribosomal protein L23	375	Shell genes
+rpsS	1	30S ribosomal protein S19	377	Shell genes
+ruvB_1	1	Holliday junction ATP-dependent DNA helicase RuvB	430	Shell genes
+sdpI	1	Immunity protein SdpI	417	Shell genes
+secA	1	Protein translocase subunit SecA	406	Shell genes
+strA	1	Sortase A	409	Shell genes
+treA	1	Trehalose-6-phosphate hydrolase	429	Shell genes
+ybiT_1	1	putative ABC transporter ATP-binding protein YbiT	277	Shell genes
+ybjI	1	5-amino-6-(5-phospho-D-ribitylamino)uracil phosphatase YbjI	426	Shell genes
+yeiL	1	Regulatory protein YeiL	421	Shell genes
+yohK	1	Inner membrane protein YohK	386	Shell genes
+yutF	1	Acid sugar phosphatase	412	Shell genes
+zupT	1.05	Zinc transporter ZupT	431	Shell genes
