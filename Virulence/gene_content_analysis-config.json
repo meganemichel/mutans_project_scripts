@@ -1,0 +1,6 @@
+{
+"workdir": "/mnt/archgen/mutans/08-gene_content_analysis/virulence_genes/Ancient_NEW/",
+"BAM_DIRECTORY": "/mnt/archgen/mutans/08-gene_content_analysis/virulence_genes/Ancient_NEW/bam_files/",
+"TARGET_GENE_BED": "/mnt/archgen/mutans/08-gene_content_analysis/target_gene_set/virulence/virulence_genes.truncated.bed",
+"TARGET_GENE_NAMES": "/mnt/archgen/mutans/08-gene_content_analysis/target_gene_set/virulence/virulence_names.reordered.txt"
+}

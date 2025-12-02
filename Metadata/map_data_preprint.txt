@@ -1,0 +1,77 @@
+Individual Id	Archaeological ID	Capture ID	Country	Site	Latitude	Longitude	Culture/Period	Radiocarbon Dating	Approximate Chronology	C14 Uncalibrated	C14 Uncalibrated Variation	C14 Calibrated From	C14 Calibrated To	C14 Id	C14 Dated?	Plot From	Plot To	Plot Mid	Region
+ALM029	AY-104	ALM029.A0101.SM1	Spain	La Almoloya	37.9528	-1.5082	"Bronze Age, El Argar"	-	1750-1550 BCE	-	-	-	-	-	No	-1750	-1550	-1650	Iberia
+CDL001	Castillo de Lorca Loct4	CDL001.A0201.SM1	Spain	Castillo de Lorca	37.6775	-1.7058	"Bronze Age, El Argar"	-	2000-1550 BCE	-	-	-	-	-	No	-2000	-1550	-1775	Iberia
+CLL006	Lech 8	CLL006.A0101.SM1	Spain	Cueva de las Lechuzas	38.6303	-0.863	Late Neolithic-Chalcolithic	-	3300-2300 BCE	-	-	-	-	-	No	-3300	-2300	-2800	Iberia
+CMS002	54	CMS002.A0201.SM1	Portugal	Concheiro da Moita do Sebastao	39.102	-8.7099	Mesolithic	-	6000-5300 BCE	-	-	-	-	-	No	-6000	-5300	-5650	Iberia
+EFA011	FA7-1961	EFA011.A0201.SM1	Spain	Es Forat de ses Aritges	40.0049	3.8616	Late Bronze Age	-	1200-1000 BCE	-	-	-	-	-	No	-1200	-1000	-1100	Iberia
+I0220	Cerdanyola	XXX001.A161274.SM1	Spain	Paris_Street	41.4919	2.1389	"Chalcolithic, Bell Beaker"	-	2850-2250 BCE	-	-	-	-	-	No	-2850	-2250	-2550	Iberia
+I0405	Mina3	XXX001.A16571.SM1	Spain	La_Mina	41.2522	-2.3262	Middle Neolithic	-	3900-3600 BCE	-	-	-	-	-	No	-3900	-3600	-3750	Iberia
+I0556	QLB2A	XXX001.A161116.SM1	Germany	Quedlinburg	51.7868	11.1535	"Middle Neolithic, Baalberge culture"	-	3950-3400 BCE	-	-	-	-	-	No	-3950	-3400	-3675	Central Europe
+I0763	Oakington1375	XXX001.A161133.SM1	England	Oakington	52.2614	0.0687	Medieval	-	400-600 CE	-	-	-	-	-	No	400	600	500	Northern Europe
+I0791	LintonSk351	XXX001.A161161.SM1	England	Linton	52.0991	0.277	Medieval	"1205 ± 30 (SUERC-20250), 635-937 calCE"	-	1205	30	635	937	SUERC-20250	Yes	635	937	786	Northern Europe
+I0796	KAR11B	XXX001.A161166.SM1	Germany	Karsdorf	51.2831	11.65	"Early Neolithic, LBK"		5500-4850 BCE	-	-	-	-	-	No	-5500	-4850	-5175	Central Europe
+I0966	Huaca Pucllana Ychsma	XXX001.A161233.SM1	Peru	Huaca_Pucllana	-12.115	-77.0335	"Late Intermediate Period, Ychsma culture"		1000-1450 CE	-	-	-	-	-	No	1000	1450	1225	Americas
+I0970	Huaca Pucllana Wari	XXX001.A161237.SM1	Peru	Huaca_Pucllana	-12.115	-77.0335	"Middle Horizon, Wari culture"		800-1000 CE	-	-	-	-	-	No	800	1000	900	Americas
+I0972	Huaca Pucllana Ychsma	XXX001.A161239.SM1	Peru	Huaca_Pucllana	-12.115	-77.0335	"Late Intermediate Period, Ychsma culture"		1000-1450 CE	-	-	-	-	-	No	1000	1450	1225	Americas
+I1538	ESP20	XXX001.A161330.SM1	Germany	Esperstedt	51.4235	11.6736	Corded Ware	"4008 ± 22 (MAMS-34272), 2574-2470 calBCE"	2800-2200 BCE	4008	22	-2574	-2470	MAMS-34272	Yes	-2574	-2470	-2522	Central Europe
+I1553	Cerdanyola	XXX001.A161345.SM1	Spain	Paris_Street	41.4919	2.1389	"Chalcolithic, Bell Beaker"	-	2850-2250 BCE	-	-	-	-	-	No	-2850	-2250	-2550	Iberia
+IKI023	SK 624	IKI023.A0102.SM1	Turkey	İkiztepe	41.6137	35.8711	Chalcolithic	-	3500-3000 BCE	-	-	-	-	-	No	-3500	-3000	-3250	Anatolia
+PAN049	DA3135_77	PAN049.A0101.SM1.1	Spain	Panoría	37.3504	-3.2934	Late Neolithic	-	3500-3300 BCE	-	-	-	-	-	No	-3500	-3300	-3400	Iberia
+REN010	JK1939	REN010.A0102.SM1	Finland	Renko	60.8936	24.287	Late Medieval/Early Modern Period	-	~1770 CE	-	-	-	-	-	No	1770	1770	1770	Northern Europe
+SGA024	San Gregorio U69 93-94 Ent. 275	SGA024.B0102.SM1	Mexico	San Gregorio Atlapulco	19.2511	-99.0556	Siglos XVI y XVII	-	1410-1641 CE	-	-	-	-	-	No	1410	1641	1525.5	Americas
+SJN032	Caja Calotas SN	SJN032.A0101.SM1	Mexico	Hospital Real de San José de los Naturales	19.4313	-99.1416	Siglos XVI y XVII	-	1500-1700 CE	-	-	-	-	-	No	1500	1700	1600	Americas
+TIL003	T-1701	TIL003.A0101.SM1	Papua New Guinea	Tilu	-5.1257	145.8014	Post Lapita (Pre-colonial Madang Period)	-	1300-1400 CE	-	-	-	-	-	No	1300	1400	1350	Oceania
+TIT012	96 TH 63202/1	TIT012.A0103.SM1	Turkey	Titriş Höyük	37.4762	38.6761	Early Bronze Age	-	2300-2100 BCE	-	-	-	-	-	No	-2300	-2100	-2200	Anatolia
+TON003	Sk9.3	TON003.A0102.SM1	Tonga	"Talasiu, Tongatapu"	-21.17	-175.11	Late Lapita age	-	750-650 BCE	-	-	-	-	-	No	-750	-650	-700	Oceania
+VEK006	BZNK-486/6;8	VEK006.A0101.SM1	Russian Federation	Velikent	42.1798	48.0661	Kura-Araxes culture	-	3000-2800 BCE	-	-	-	-	-	No	-3000	-2800	-2900	Caucuses
+VEN018	fossa VI.C	VEN018.A0102.SM1	Italy	Terme di Venosa	40.9607	15.8151	Early Medieval	-	672-800 CE	-	-	-	-	-	No	672	800	736	Eastern Mediterranean
+VIL009	"US327_CR1, tomb 16"	VIL009.A0102.SM1	Italy	Villamar	39.6167	8.95	"Iron Age, Punic period"	-	350-200 BCE	-	-	-	-	-	No	-350	-200	-275	Eastern Mediterranean
+VLI061	Grave 517	VLI061.B0102.SM1	Czech Republic	Vliněves	50.3729	14.4486	"Bronze Age, Proto-Únětice/Early Únětice"	-	2200-2000 BCE	-	-	-	-	-	No	-2200	-2000	-2100	Central Europe
+XAN005	Tomb 11	XAN005.A0102.SM1	Greece	Chania	35.5162	24.0188	"Bronze Age, LM IIIA2-LM IIIB1"	-	1350-1250 BCE	-	-	-	-	-	No	-1350	-1250	-1300	Eastern Mediterranean
+ZAP001	Zapatería Urna 3 Tumba 3	ZAP001.A0201.SM1	Spain	Lorca-Zapatería	37.6744	-1.6967	"Bronze Age, El Argar"	-	1750-1550 BCE	-	-	-	-	-	No	-1750	-1550	-1650	Iberia
+FUT008	FURS12 burial 12	FUT008.A0102.SM1	Vanuatu	Futuna	19.5116	170.23	c. 1300 BP	"1376 ± 29 (MAMS-29689), 603-759 calCE"	-	1376	29	603	759	MAMS-29689	Yes	603	759	681	Oceania
+I0975	Huaca Pucllana Lima	XXX001.A161241.SM1	Peru	Huaca_Pucllana	-12.115	-77.0335	"Early Intermediate Period, Lima Culture"	"1493 ± 30 (OxA-31120), 549-652 calCE"	-	1493	30	549	652	OxA-31120	Yes	549	652	600.5	Americas
+PVA001	Pavão XVI	PVA001.A0101.SM1	Brazil	Pavão 16	-24.6493	-48.783	Riverine shellmound occupation	"1552 ± 22 (MAMS-39012), 482-637 calCE"	-	1552	22	482	637	MAMS-39012	Yes	482	637	559.5	Americas
+FAR004	UCT-386; I9133	FAR004.A0104.SM1	South Africa	Faraoskop	-32.1253	18.6144	Later Stone Age	"2000 ± 50 (Pta-5283), 68 calBCE-202 calCE"	-	2000	50	-68	202	Pta-5283	Yes	-68	202	67	Africa
+VET009	T8 n.666	VET009.A0101.SM1	Italy	Vetulonia	42.9252	10.9091	Etruscan period	"2197 ± 20 (MAMS-42833), 361-175 calBCE"	-	2197	20	-361	-175	MAMS-42833	Yes	-361	-175	-268	Eastern Mediterranean
+KIV007	Kivutkalns209	KIV007.A0101.SM1	Latvia	Kivutkalns	56.8521	24.272	"Late Bronze Age, Cist Grave culture"	"2497 ± 30; 2556 ± 30 (Hela-3741; Hela-3742), 778-516 calBCE; 804-551 calBCE"	-	2497	30	-804	-516	Hela-3741; Hela-3742	Yes	-804	-516	-660	Baltic
+KIV002	Kivutkalns207	KIV002.A0101.SM1	Latvia	Kivutkalns	56.8521	24.272	Late Bronze Age	"2511 ± 30 (Hela-3743), 787-541 calBCE"	-	2511	30	-787	-541	Hela-3743	Yes	-787	-541	-664	Baltic
+KIV006	Kivutkalns42	KIV006.A0101.SM1	Latvia	Kivutkalns	56.8521	24.272	"Late Bronze Age, Cist Grave culture"	"2573 ± 30 (Hela-3740), 809-570 calBCE"	-	2573	30	-809	-570	Hela-3740	Yes	-809	-570	-689.5	Baltic
+I2033	HAL36b	XXX001.A161384.SM1	Germany	Halberstadt	51.8939	11.0523	"Bronze Age, Urnfield culture"	"2889 ± 30 (MAMS-21484), 1202-940 calBCE"	-	2889	30	-1202	-940	MAMS-21484	Yes	-1202	-940	-1071	Central Europe
+ALA002	"45.71, Locus 03-3017, Pail 246, Skeleton S04-8"	ALA002.B0102.SM1	Turkey	Alalakh	36.2378	36.3847	"LBI (Late Bronze 1), Period 4"	"3158 ± 22 (MAMS-33676), 1499-1398 calBCE"	-	3158	22	-1499	-1398	MAMS-33676	Yes	-1499	-1398	-1448.5	Anatolia
+SCA003	115	SCA003.A0102.SM1	Italy	Su Cannisoni	39.388	8.3793	"Middle Bronze Age, Nuragic I"	"3281 ± 28 (MAMS-39530), 1619-1498 calBCE"	-	3281	28	-1619	-1498	MAMS-39530	Yes	-1619	-1498	-1558.5	Eastern Mediterranean
+OOH016	"Bef. 141, OTTM_141_d"	OOH016.A0102.SM1	Germany	Oberottmarshausen	48.2252	10.8498	Middle Bronze Age	"3297 ± 36 (MAMS-21552), 1672-1461 calBCE"	-	3297	36	-1672	-1461	MAMS-21552	Yes	-1672	-1461	-1566.5	Central Europe
+GIN007	11558	GIN007.A0101.SM1	Russian Federation	Ginchi	42.429	46.6404	Bronze Age	"3345 ± 20 (MAMS-42364), 1729-1538 calBCE"	-	3345	20	-1729	-1538	MAMS-42364	Yes	-1729	-1538	-1633.5	Caucuses
+GIN005	11556	GIN005.A0101.SM1	Russian Federation	Ginchi	42.429	46.6404	Bronze Age	"3351 ± 20 (MAMS-42349),1733-1542 calBCE"	-	3351	20	-1733	-1542	MAMS-42349	Yes	-1733	-1542	-1637.5	Caucuses
+MIB002	Grave 55	MIB002.A0102.SM1	Czech Republic	Mikulovice	49.9922	15.7767	"Early Bronze Age, Classical Únětice Culture"	"3494 ± 19 (MAMS-30482), 1884-1749 calBCE"	-	3494	19	-1884	-1749	MAMS-30482	Yes	-1884	-1749	-1816.5	Central Europe
+MMI002	Madres Mercedarias Iglesia Tomb 11-1	MMI002.A0201.SM1	Spain	Lorca-Madres Mercedarias Iglesia	37.6744	-1.6967	"Bronze Age, El Argar"	"3510 ± 40 (OxA-7672), 1943-1699 calBCE"	-	3510	40	-1943	-1699	OxA-7672	Yes	-1943	-1699	-1821	Iberia
+LOT001	Los Tintes 2-1	LOT001.A0201.SM1	Spain	Lorca-Los Tintes	37.6744	-1.6967	"Bronze Age, El Argar"	"3560 ± 35 (OxA-7667), 2021-1773 calBCE"	-	3560	35	-2021	-1773	OxA-7667	Yes	-2021	-1773	-1897	Iberia
+I0803	EUL41A	XXX001.A161173.SM1	Germany	Eulau	51.1787	11.8538	"Early Bronze Age, Únětice"	"3650 ± 26 (MAMS-22822), 2135-1941 calBCE"	-	3650	26	-2135	-1941	MAMS-22822	Yes	-2135	-1941	-2038	Central Europe
+OBK010	"Grab 23, Bef. 80, OBKR_80"	OBK010.A0101.SM1	Germany	Obere Kreuzstrasse	48.2666	10.8786	Early Bronze Age	"3664 ± 24 (MAMS-18901), 2136-1955 calBCE"	-	3664	24	-2136	-1955	MAMS-18901	Yes	-2136	-1955	-2045.5	Central Europe
+I0806	QLB28b	XXX001.A161176.SM1	Germany	Quedlinburg	51.7868	11.1535	"Late Neolithic, Bell Beaker"	"3824 ± 25 (MAMS-22820), 2433-2147 calBCE"	-	3824	25	-2433	-2147	MAMS-22820	Yes	-2433	-2147	-2290	Central Europe
+I0461	Roy4	XXX001.A161129.SM1	Spain	Arroyal_I	42.9098	-4.077	"Late Copper Age, Bell Beaker"	"3837 ± 25 (MAMS-14857), 2453-2201 calBCE"	-	3837	25	-2453	-2201	MAMS-14857	Yes	-2453	-2201	-2327	Iberia
+I0111	ROT4	XXX001.A161203.SM1	Germany	Rothenschirmbach	51.45	11.54	Bell Beaker	"3881 ± 50 (Erl-8712), 2474-2201 calBCE"	-	3881	50	-2474	-2201	Erl-8712	Yes	-2474	-2201	-2337.5	Central Europe
+EHU002	"UE450, Hund2"	EHU002.A0201.SM1	Spain	El Hundido	42.4192	-3.4847	Late Chalcolithic	"3933 ± 32 (CSIC-1896), 2564-2299 calBCE"	-	3933	32	-2564	-2299	CSIC-1896	Yes	-2564	-2299	-2431.5	Iberia
+PRU003	Grave 3	PRU003.A0102.SM1	Czech Republic	Prague-Ruzyně	50.0908	14.3137	Chalcolithic/Eneolithic/Final Neolithic/Bell Beaker	"3957 ± 24 (MAMS-30801), 2570-2348 calBCE "	-	3957	24	-2570	-2348	MAMS-30801	Yes	-2570	-2348	-2459	Central Europe
+I0550	KAR22A	XXX001.A161110.SM1	Germany	Karsdorf	51.2831	11.65	"Late Neolithic, Corded Ware Culture"	"3993 ± 21 (MAMS-23344), 2572-2467 calBCE"	-	3993	21	-2572	-2467	MAMS-23344	Yes	-2572	-2467	-2519.5	Central Europe
+KPT003	8302	KPT003.A0101.SM1	Russian Federation	Khaptsagai	53.0445	105.5106	"Late Neolithic, Glazkovo stage"	"4021 ± 19 (MAMS-37927), 2576-2480 calBCE"	-	4021	19	-2576	-2480	MAMS-37927	Yes	-2576	-2480	-2528	Siberia
+VLI009	Grave 965	VLI009.B0103.SM1	Czech Republic	Vliněves	50.3729	14.4486	"Chalcolithic/Eneolithic/Final Neolithic, Corded Ware"	"4078 ± 25 (MAMS-45797),  2848-2495 calBCE"	-	4078	25	-2848	-2495	MAMS-45797	Yes	-2848	-2495	-2671.5	Central Europe
+I0455	Cmol123	XXX001.A161123.SM1	Spain	Camino_del_Molino	38.1028	-1.8654	Early Copper Age	"4210 ± 40 (Beta-261529), 2905-2636 calBCE"	-	4210	40	-2905	-2636	Beta-261529	Yes	-2905	-2636	-2770.5	Iberia
+PLI001	Plinkaigalis242	PLI001.A0101.SM1	Lithuania	Plinkaigalis	55.4102	23.6468	"Neolithic, Corded Ware/Battle Axe culture"	"4280 ± 75 (OxA-5936), 3264-2625 calBCE"	-	4280	75	-3264	-2625	OxA-5936	Yes	-3264	-2625	-2944.5	Baltic
+I0554	SALZ88A	XXX001.A161114.SM1	Germany	Salzmünde	51.5254	11.8283	"Neolithic, Salzmünde culture"	"4538 ± 47 (Er10329), 3487-3043 calBCE"	-	4538	47	-3487	-3043	Er10329	Yes	-3487	-3043	-3265	Central Europe
+MK5008	"BZNK-066/2, 066/3"	MK5008.B0101.SM1	Russian Federation	Maryinskaya 5	43.9054	43.5219	"Bronze Age, Late Maykop"	"4544 ± 25 (MAMS-29810), 3369-3103 calBCE"	-	4544	25	-3369	-3103	MAMS-29810	Yes	-3369	-3103	-3236	Caucuses
+OSS001	"kurgan 3, grave 4, ind. 1"	OSS001.A0101.SM1	Russian Federation	Nogir 3	43.0844	44.6327	"Bronze Age, Maykop"	"4857 ± 23 (MAMS-29813), 3704-3535 calBCE"	-	4857	23	-3704	-3535	MAMS-29813	Yes	-3704	-3535	-3619.5	Caucuses
+PGL001	CHA52	PGL001.A0103.SM1	Peru	Pongumal	-6.1167	-78	"Late Intermediate Period, Chachapoya culture"	"545 ± 19 (MAMS-35095), 1405-1445 calCE"	-	545	19	1405	1445	MAMS-35095	Yes	1405	1445	1425	Americas
+SJN015	TU258/San José de los Naturales SLU 11B 1992 4	SJN015.B0101.SM1	Mexico	Hospital Real de San José de los Naturales	19.4313	-99.1416	Siglos XVI y XVII	"554 ± 17 (MAMS-35847), 1326-1423 calCE"	-	554	17	1326	1423	MAMS-35847	Yes	1326	1423	1374.5	Americas
+I0785	Yunatsite99b	XXX001.A161155.SM1	Bulgaria	Yunatsite	42.23	24.26	Eneolithic/Chalcolithic	"5578 ± 23 (MAMS-28135), 4451-4354 calBCE"	-	5578	23	-4451	-4354	MAMS-28135	Yes	-4451	-4354	-4402.5	Balkans
+PIE034	P08 B 108	PIE034.B0101.SM1	Romania	Pietrele	44.0681	26.1562	Chalcolithic period	"5741 ± 22 (MAMS-47819), 4681-4502 calBCE"	-	5741	22	-4681	-4502	MAMS-47819	Yes	-4681	-4502	-4591.5	Balkans
+DON004	Donkalnis6	DON004.A0101.SM1	Lithuania	Donkalnis	55.8078	22.4222	"Mesolithic, Narva culture"	"5770 ± 40 (Poz-61574), 4718-4503 calBCE"	-	5770	40	-4718	-4503	Poz-61574	Yes	-4718	-4503	-4610.5	Baltic
+I2007	HAL05a	XXX001.A161358.SM1	Germany	Halberstadt	51.8939	11.0523	"Early Neolithic, LBK"	"6136 ± 34 (MAMS-21479), 5211-4957 calBCE"	-	6136	34	-5211	-4957	MAMS-21479	Yes	-5211	-4957	-5084	Central Europe
+I2037	HAL39b	XXX001.A161183.SM1	Germany	Halberstadt	51.8939	11.0523	"Early Neolithic, LBK"	"6144 ± 32 (KIA-40343), 5210-4998 calBCE"	-	6144	32	-5210	-4998	KIA-40343	Yes	-5210	-4998	-5104	Central Europe
+I2013	HAL14	XXX001.A161364.SM1	Germany	Halberstadt	51.8939	11.0523	"Early Neolithic, LBK"	"6156 ± 35 (MAMS-21480), 5211-5002 calBCE"	-	6156	35	-5211	-5002	MAMS-21480	Yes	-5211	-5002	-5106.5	Central Europe
+REV004	CHA66	REV004.A0102.SM1	Peru	Revash	-6.3666	-78.0012	"Late Intermediate Period, Chachapoya culture"	"627 ± 16 (MAMS-35098), 1320-1407 calCE"	-	627	16	1320	1407	MAMS-35098	Yes	1320	1407	1363.5	Americas
+I0409	Troc1	XXX001.A16575.SM1	Spain	Els Trocs Cave	42.4964	0.507	"Early Neolithic, Epicardial"	"6280 ± 25 (MAMS-16159), 5312-5212 calBCE"	-	6280	25	-5312	-5212	MAMS-16159	Yes	-5312	-5212	-5262	Iberia
+BOT005	HK39:147b BII/2	BOT005.A0101.SM1	Germany	Bottendorf	51.3053	11.4036	Mesolithic	"6685 ± 38 (OxA-27248), 5701-5486 calBCE"	-	6685	38	-5701	-5486	OxA-27248	Yes	-5701	-5486	-5593.5	Central Europe
+I0174	BAM25a	XXX001.A16566.SM1	Hungary	"Alsónyék-Bátaszék, Mérnöki telep"	46.2086	18.7	"Early Neolithic, Starčevo"	"6695 ± 40 (MAMS-11939), 5712-5531 calBCE"	-	6695	40	-5712	-5531	MAMS-11939	Yes	-5712	-5531	-5621.5	Central Europe
+CCA002	42	CCA002.B0201.SM1	Portugal	Concheiro do Cabeço da Arruda	39.102	-8.7099	Mesolithic	"6960 ± 70 (TO-359), 5986-5721 calBCE"	-	6960	70	-5986	-5721	TO-359	Yes	-5986	-5721	-5853.5	Iberia
+KGH2-B		KGH2-B	Ireland													-2280	-2140	-2210	Northern Europe

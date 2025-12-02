@@ -1,0 +1,11 @@
+genotypename:       /mnt/archgen/mutans/06-popgen/infiles/02-modernanc_eigenstrat_all_homo_core_NEW//modernanc_subset.geno
+snpname:       /mnt/archgen/mutans/06-popgen/infiles/02-modernanc_eigenstrat_all_homo_core_NEW//modernanc_subset.snp
+indivname:       /mnt/archgen/mutans/06-popgen/infiles/02-modernanc_eigenstrat_all_homo_core_NEW//modernanc_subset.ind
+evecoutname:       ./defaults/modernanc_subset.evec
+evaloutname:       ./defaults/modernanc_subset.eval
+poplistname:       ./modern.poplist
+lsqproject: YES
+#shrinkmode: YES
+#outliermode: 2
+#usenorm: NO
+numthreads: 8
