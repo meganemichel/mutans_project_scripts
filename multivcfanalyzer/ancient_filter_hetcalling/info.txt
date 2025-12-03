@@ -1,0 +1,110 @@
+MultiVCFAnalyzer - 0.87-alpha (2017-11-23)
+by Alexander Herbig
+
+Input files:
+Reference genome fasta file: /mnt/archgen/mutans/99-references/Smutans_UA159/GCA_000007465.2_ASM746v2_genomic.fasta
+Reference genome gene annotation (gff): /mnt/archgen/mutans/99-references/Smutans_UA159/GCA_000007465.2_ASM746v2_genomic.gff
+List of positions to exclude (gff): /mnt/archgen/mutans/99-references/Smutans_UA159/GCA_000007465.2_ASM746v2_regions2exclude_rRNA_tRNA.gff
+SNP effect analysis result file (from SnpEff): NA
+
+Output files:
+Output directory: ./multivcfAnalyzer_5x_het
+SNP alignment (fasta): ./multivcfAnalyzer_5x_het/snpAlignment.fasta
+SNP alignment including entry for reference genome (fasta): ./multivcfAnalyzer_5x_het/snpAlignmentIncludingRefGenome.fasta
+SNP table: ./multivcfAnalyzer_5x_het/snpTable.tsv
+SNP table with uncertainty calls: ./multivcfAnalyzer_5x_het/snpTableWithUncertaintyCalls.tsv
+SNP table to be used as input for SnpEff: ./multivcfAnalyzer_5x_het/snpTableForSnpEff.tsv
+SNP table to be used as input for STRUCTURE: ./multivcfAnalyzer_5x_het/structureGenotypes.tsv
+SNP table to be used as input for STRUCTURE (no columns with missing data): ./multivcfAnalyzer_5x_het/structureGenotypes_noMissingData-Columns.tsv
+SNP calling statistics: ./multivcfAnalyzer_5x_het/snpStatistics.tsv
+
+Parameters:
+Minimal genotyping quality (GATK): 30.0
+Minimal coverage for base call: 5
+Minimal allele frequency for homozygous call: 0.9
+Minimal allele frequency for heterozygous call: 0.1
+Write allele frequencies: true
+
+Additional notes:
+Reference genome name: AE014133.2 Streptococcus mutans UA159, complete genome
+Number of genomes (vcf files): 76
+Run started: 6 Nov 2025 18:55:13 GMT
+Run finished: 6 Nov 2025 19:00:16 GMT
+
+List of VCF files:
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/VEN018.A0102.SM1/VEN018.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/REV004.A0102.SM1/REV004.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/PRU003.A0102.SM1/PRU003.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/VET009.A0101.SM1/VET009.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/OBK010.A0101.SM1/OBK010.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/LOT001.A0201.SM1/LOT001.A0201.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/KIV007.A0101.SM1/KIV007.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A16566.SM1/XXX001.A16566.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161133.SM1/XXX001.A161133.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/SGA024.B0102.SM1/SGA024.B0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/REN010.A0102.SM1/REN010.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161176.SM1/XXX001.A161176.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161364.SM1/XXX001.A161364.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/KIV006.A0101.SM1/KIV006.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/FAR004.A0104.SM1/FAR004.A0104.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/VLI061.B0102.SM1/VLI061.B0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/VLI009.B0103.SM1/VLI009.B0103.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/IKI023.A0102.SM1/IKI023.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/TIT012.A0103.SM1/TIT012.A0103.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/EFA011.A0201.SM1/EFA011.A0201.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161241.SM1/XXX001.A161241.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161233.SM1/XXX001.A161233.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/FUT008.A0102.SM1/FUT008.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161116.SM1/XXX001.A161116.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A16575.SM1/XXX001.A16575.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161161.SM1/XXX001.A161161.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161239.SM1/XXX001.A161239.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A16571.SM1/XXX001.A16571.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161237.SM1/XXX001.A161237.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161358.SM1/XXX001.A161358.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/BOT005.A0101.SM1/BOT005.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161274.SM1/XXX001.A161274.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161155.SM1/XXX001.A161155.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/CMS002.A0201.SM1/CMS002.A0201.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/OSS001.A0101.SM1/OSS001.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/KPT003.A0101.SM1/KPT003.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161114.SM1/XXX001.A161114.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/CLL006.A0101.SM1/CLL006.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/ZAP001.A0201.SM1/ZAP001.A0201.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/EHU002.A0201.SM1/EHU002.A0201.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/TIL003.A0101.SM1/TIL003.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/SJN015.B0101.SM1/SJN015.B0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161110.SM1/XXX001.A161110.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/CCA002.B0201.SM1/CCA002.B0201.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161384.SM1/XXX001.A161384.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/KIV002.A0101.SM1/KIV002.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/ALA002.B0102.SM1/ALA002.B0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/MK5008.B0101.SM1/MK5008.B0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/GIN007.A0101.SM1/GIN007.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/SCA003.A0102.SM1/SCA003.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/CDL001.A0201.SM1/CDL001.A0201.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161183.SM1/XXX001.A161183.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/SJN032.A0101.SM1/SJN032.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161173.SM1/XXX001.A161173.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XAN005.A0102.SM1/XAN005.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/PVA001.A0101.SM1/PVA001.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/VIL009.A0102.SM1/VIL009.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/MMI002.A0201.SM1/MMI002.A0201.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161330.SM1/XXX001.A161330.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161123.SM1/XXX001.A161123.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/TON003.A0102.SM1/TON003.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/MIB002.A0102.SM1/MIB002.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/ALM029.A0101.SM1/ALM029.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161203.SM1/XXX001.A161203.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161166.SM1/XXX001.A161166.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/PLI001.A0101.SM1/PLI001.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161129.SM1/XXX001.A161129.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/VEK006.A0101.SM1/VEK006.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/DON004.A0101.SM1/DON004.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/OOH016.A0102.SM1/OOH016.A0102.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/GIN005.A0101.SM1/GIN005.A0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/PIE034.B0101.SM1/PIE034.B0101.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/PGL001.A0103.SM1/PGL001.A0103.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/XXX001.A161345.SM1/XXX001.A161345.SM1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/PAN049.A0101.SM1/PAN049.A0101.SM1.1.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_malt_filter/multivcfanalzyer/input/KGH-2B_merged/KGH2-B_merged.unifiedgenotyper.vcf.gz

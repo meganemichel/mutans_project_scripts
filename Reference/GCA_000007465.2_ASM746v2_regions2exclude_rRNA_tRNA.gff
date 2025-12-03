@@ -1,0 +1,80 @@
+AE014133.2	Genbank	rRNA	16877	18428	.	+	.	ID=rna-SMU_r01;Parent=gene-SMU_r01;gbkey=rRNA;locus_tag=SMU_r01;product=16S ribosomal RNA
+AE014133.2	Genbank	tRNA	18486	18558	.	+	.	ID=rna-SMU_t01;Parent=gene-SMU_t01;gbkey=tRNA;locus_tag=SMU_t01;product=tRNA-Ala
+AE014133.2	Genbank	rRNA	18817	21717	.	+	.	ID=rna-SMU_r02;Parent=gene-SMU_r02;gbkey=rRNA;locus_tag=SMU_r02;product=23S ribosomal RNA
+AE014133.2	Genbank	rRNA	21898	22017	.	+	.	ID=rna-SMU_r03;Parent=gene-SMU_r03;gbkey=rRNA;locus_tag=SMU_r03;product=5S ribosomal RNA
+AE014133.2	Genbank	tRNA	22018	22090	.	+	.	ID=rna-SMU_t02;Parent=gene-SMU_t02;gbkey=tRNA;locus_tag=SMU_t02;product=tRNA-Val
+AE014133.2	Genbank	tRNA	22120	22192	.	+	.	ID=rna-SMU_t03;Parent=gene-SMU_t03;gbkey=tRNA;locus_tag=SMU_t03;product=tRNA-Asp
+AE014133.2	Genbank	tRNA	22220	22295	.	+	.	ID=rna-SMU_t04;Parent=gene-SMU_t04;gbkey=tRNA;locus_tag=SMU_t04;product=tRNA-Lys
+AE014133.2	Genbank	tRNA	22302	22383	.	+	.	ID=rna-SMU_t05;Parent=gene-SMU_t05;gbkey=tRNA;locus_tag=SMU_t05;product=tRNA-Leu
+AE014133.2	Genbank	tRNA	22398	22470	.	+	.	ID=rna-SMU_t06;Parent=gene-SMU_t06;gbkey=tRNA;locus_tag=SMU_t06;product=tRNA-Thr
+AE014133.2	Genbank	tRNA	22473	22544	.	+	.	ID=rna-SMU_t07;Parent=gene-SMU_t07;gbkey=tRNA;locus_tag=SMU_t07;product=tRNA-Gly
+AE014133.2	Genbank	tRNA	22552	22637	.	+	.	ID=rna-SMU_t08;Parent=gene-SMU_t08;gbkey=tRNA;locus_tag=SMU_t08;product=tRNA-Leu
+AE014133.2	Genbank	tRNA	22651	22724	.	+	.	ID=rna-SMU_t09;Parent=gene-SMU_t09;gbkey=tRNA;locus_tag=SMU_t09;product=tRNA-Arg
+AE014133.2	Genbank	tRNA	22778	22851	.	+	.	ID=rna-SMU_t10;Parent=gene-SMU_t10;gbkey=tRNA;locus_tag=SMU_t10;product=tRNA-Pro
+AE014133.2	Genbank	tRNA	22857	22930	.	+	.	ID=rna-SMU_t11;Parent=gene-SMU_t11;gbkey=tRNA;locus_tag=SMU_t11;product=tRNA-Met
+AE014133.2	Genbank	tRNA	22954	23027	.	+	.	ID=rna-SMU_t12;Parent=gene-SMU_t12;gbkey=tRNA;locus_tag=SMU_t12;product=tRNA-Met
+AE014133.2	Genbank	tRNA	23042	23131	.	+	.	ID=rna-SMU_t13;Parent=gene-SMU_t13;gbkey=tRNA;locus_tag=SMU_t13;product=tRNA-Ser
+AE014133.2	Genbank	tRNA	23144	23217	.	+	.	ID=rna-SMU_t14;Parent=gene-SMU_t14;gbkey=tRNA;locus_tag=SMU_t14;product=tRNA-Met
+AE014133.2	Genbank	tRNA	23227	23299	.	+	.	ID=rna-SMU_t15;Parent=gene-SMU_t15;gbkey=tRNA;locus_tag=SMU_t15;product=tRNA-Phe
+AE014133.2	Genbank	tRNA	23306	23376	.	+	.	ID=rna-SMU_t16;Parent=gene-SMU_t16;gbkey=tRNA;locus_tag=SMU_t16;product=tRNA-Gly
+AE014133.2	Genbank	tRNA	23411	23484	.	+	.	ID=rna-SMU_t17;Parent=gene-SMU_t17;gbkey=tRNA;locus_tag=SMU_t17;product=tRNA-Ile
+AE014133.2	Genbank	tRNA	23494	23581	.	+	.	ID=rna-SMU_t18;Parent=gene-SMU_t18;gbkey=tRNA;locus_tag=SMU_t18;product=tRNA-Ser
+AE014133.2	Genbank	tRNA	100332	100417	.	+	.	ID=rna-SMU_t19;Parent=gene-SMU_t19;gbkey=tRNA;locus_tag=SMU_t19;product=tRNA-Leu
+AE014133.2	Genbank	tRNA	108558	108630	.	+	.	ID=rna-SMU_t20;Parent=gene-SMU_t20;gbkey=tRNA;locus_tag=SMU_t20;product=tRNA-Thr
+AE014133.2	Genbank	rRNA	185749	187300	.	+	.	ID=rna-SMU_r04;Parent=gene-SMU_r04;gbkey=rRNA;locus_tag=SMU_r04;product=16S ribosomal RNA
+AE014133.2	Genbank	tRNA	187358	187430	.	+	.	ID=rna-SMU_t21;Parent=gene-SMU_t21;gbkey=tRNA;locus_tag=SMU_t21;product=tRNA-Ala
+AE014133.2	Genbank	rRNA	187689	190589	.	+	.	ID=rna-SMU_r05;Parent=gene-SMU_r05;gbkey=rRNA;locus_tag=SMU_r05;product=23S ribosomal RNA
+AE014133.2	Genbank	rRNA	190770	190889	.	+	.	ID=rna-SMU_r06;Parent=gene-SMU_r06;gbkey=rRNA;locus_tag=SMU_r06;product=5S ribosomal RNA
+AE014133.2	Genbank	tRNA	190890	190962	.	+	.	ID=rna-SMU_t22;Parent=gene-SMU_t22;gbkey=tRNA;locus_tag=SMU_t22;product=tRNA-Val
+AE014133.2	Genbank	tRNA	190968	191038	.	+	.	ID=rna-SMU_t23;Parent=gene-SMU_t23;gbkey=tRNA;locus_tag=SMU_t23;product=tRNA-Gly
+AE014133.2	Genbank	tRNA	191073	191146	.	+	.	ID=rna-SMU_t24;Parent=gene-SMU_t24;gbkey=tRNA;locus_tag=SMU_t24;product=tRNA-Ile
+AE014133.2	Genbank	tRNA	191158	191229	.	+	.	ID=rna-SMU_t25;Parent=gene-SMU_t25;gbkey=tRNA;locus_tag=SMU_t25;product=tRNA-Glu
+AE014133.2	Genbank	tRNA	191244	191333	.	+	.	ID=rna-SMU_t26;Parent=gene-SMU_t26;gbkey=tRNA;locus_tag=SMU_t26;product=tRNA-Ser
+AE014133.2	Genbank	tRNA	191346	191419	.	+	.	ID=rna-SMU_t27;Parent=gene-SMU_t27;gbkey=tRNA;locus_tag=SMU_t27;product=tRNA-Met
+AE014133.2	Genbank	tRNA	191429	191504	.	+	.	ID=rna-SMU_t28;Parent=gene-SMU_t28;gbkey=tRNA;locus_tag=SMU_t28;product=tRNA-Phe
+AE014133.2	Genbank	tRNA	191517	191597	.	+	.	ID=rna-SMU_t29;Parent=gene-SMU_t29;gbkey=tRNA;locus_tag=SMU_t29;product=tRNA-Tyr
+AE014133.2	Genbank	tRNA	191604	191674	.	+	.	ID=rna-SMU_t30;Parent=gene-SMU_t30;gbkey=tRNA;locus_tag=SMU_t30;product=tRNA-Trp
+AE014133.2	Genbank	tRNA	191688	191760	.	+	.	ID=rna-SMU_t31;Parent=gene-SMU_t31;gbkey=tRNA;locus_tag=SMU_t31;product=tRNA-His
+AE014133.2	Genbank	tRNA	191777	191848	.	+	.	ID=rna-SMU_t32;Parent=gene-SMU_t32;gbkey=tRNA;locus_tag=SMU_t32;product=tRNA-Gln
+AE014133.2	Genbank	tRNA	191863	191946	.	+	.	ID=rna-SMU_t33;Parent=gene-SMU_t33;gbkey=tRNA;locus_tag=SMU_t33;product=tRNA-Leu
+AE014133.2	Genbank	tRNA	328109	328197	.	-	.	ID=rna-SMU_t34;Parent=gene-SMU_t34;gbkey=tRNA;locus_tag=SMU_t34;product=tRNA-Ser
+AE014133.2	Genbank	tRNA	328360	328442	.	-	.	ID=rna-SMU_t35;Parent=gene-SMU_t35;gbkey=tRNA;locus_tag=SMU_t35;product=tRNA-Leu
+AE014133.2	Genbank	tRNA	390169	390255	.	+	.	ID=rna-SMU_t36;Parent=gene-SMU_t36;gbkey=tRNA;locus_tag=SMU_t36;product=tRNA-Ser
+AE014133.2	Genbank	tRNA	1140675	1140746	.	-	.	ID=rna-SMU_t37;Parent=gene-SMU_t37;gbkey=tRNA;locus_tag=SMU_t37;product=tRNA-Arg
+AE014133.2	Genbank	tRNA	1142213	1142287	.	-	.	ID=rna-SMU_t38;Parent=gene-SMU_t38;gbkey=tRNA;locus_tag=SMU_t38;product=tRNA-Gln
+AE014133.2	Genbank	tRNA	1142444	1142524	.	-	.	ID=rna-SMU_t39;Parent=gene-SMU_t39;gbkey=tRNA;locus_tag=SMU_t39;product=tRNA-Tyr
+AE014133.2	Genbank	tRNA	1211962	1212033	.	-	.	ID=rna-SMU_t40;Parent=gene-SMU_t40;gbkey=tRNA;locus_tag=SMU_t40;product=tRNA-Arg
+AE014133.2	Genbank	tRNA	1654785	1654858	.	-	.	ID=rna-SMU_t41;Parent=gene-SMU_t41;gbkey=tRNA;locus_tag=SMU_t41;product=tRNA-Pro
+AE014133.2	Genbank	tRNA	1654911	1654984	.	-	.	ID=rna-SMU_t42;Parent=gene-SMU_t42;gbkey=tRNA;locus_tag=SMU_t42;product=tRNA-Arg
+AE014133.2	Genbank	tRNA	1654998	1655083	.	-	.	ID=rna-SMU_t43;Parent=gene-SMU_t43;gbkey=tRNA;locus_tag=SMU_t43;product=tRNA-Leu
+AE014133.2	Genbank	tRNA	1655091	1655162	.	-	.	ID=rna-SMU_t44;Parent=gene-SMU_t44;gbkey=tRNA;locus_tag=SMU_t44;product=tRNA-Gly
+AE014133.2	Genbank	tRNA	1655165	1655237	.	-	.	ID=rna-SMU_t45;Parent=gene-SMU_t45;gbkey=tRNA;locus_tag=SMU_t45;product=tRNA-Thr
+AE014133.2	Genbank	tRNA	1655252	1655333	.	-	.	ID=rna-SMU_t46;Parent=gene-SMU_t46;gbkey=tRNA;locus_tag=SMU_t46;product=tRNA-Leu
+AE014133.2	Genbank	tRNA	1655340	1655415	.	-	.	ID=rna-SMU_t47;Parent=gene-SMU_t47;gbkey=tRNA;locus_tag=SMU_t47;product=tRNA-Lys
+AE014133.2	Genbank	tRNA	1655443	1655515	.	-	.	ID=rna-SMU_t48;Parent=gene-SMU_t48;gbkey=tRNA;locus_tag=SMU_t48;product=tRNA-Asp
+AE014133.2	Genbank	tRNA	1655545	1655617	.	-	.	ID=rna-SMU_t49;Parent=gene-SMU_t49;gbkey=tRNA;locus_tag=SMU_t49;product=tRNA-Val
+AE014133.2	Genbank	rRNA	1655618	1655737	.	-	.	ID=rna-SMU_r07;Parent=gene-SMU_r07;gbkey=rRNA;locus_tag=SMU_r07;product=5S ribosomal RNA
+AE014133.2	Genbank	rRNA	1655918	1658818	.	-	.	ID=rna-SMU_r08;Parent=gene-SMU_r08;gbkey=rRNA;locus_tag=SMU_r08;product=23S ribosomal RNA
+AE014133.2	Genbank	tRNA	1659077	1659149	.	-	.	ID=rna-SMU_t50;Parent=gene-SMU_t50;gbkey=tRNA;locus_tag=SMU_t50;product=tRNA-Ala
+AE014133.2	Genbank	rRNA	1659207	1660758	.	-	.	ID=rna-SMU_r09;Parent=gene-SMU_r09;gbkey=rRNA;locus_tag=SMU_r09;product=16S ribosomal RNA
+AE014133.2	Genbank	tRNA	1678247	1678317	.	+	.	ID=rna-SMU_t51;Parent=gene-SMU_t51;gbkey=tRNA;locus_tag=SMU_t51;product=tRNA-Thr
+AE014133.2	Genbank	pseudogene	1683393	1683464	.	-	.	ID=gene-SMU_t52;Name=SMU_t52;gbkey=Gene;gene_biotype=tRNA_pseudogene;locus_tag=SMU_t52;pseudo=true
+AE014133.2	Genbank	tRNA	1683467	1683539	.	-	.	ID=rna-SMU_t53;Parent=gene-SMU_t53;gbkey=tRNA;locus_tag=SMU_t53;product=tRNA-Thr
+AE014133.2	Genbank	tRNA	1683554	1683635	.	-	.	ID=rna-SMU_t54;Parent=gene-SMU_t54;gbkey=tRNA;locus_tag=SMU_t54;product=tRNA-Leu
+AE014133.2	Genbank	tRNA	1683642	1683717	.	-	.	ID=rna-SMU_t55;Parent=gene-SMU_t55;gbkey=tRNA;locus_tag=SMU_t55;product=tRNA-Lys
+AE014133.2	Genbank	tRNA	1683745	1683817	.	-	.	ID=rna-SMU_t56;Parent=gene-SMU_t56;gbkey=tRNA;locus_tag=SMU_t56;product=tRNA-Asp
+AE014133.2	Genbank	tRNA	1683847	1683919	.	-	.	ID=rna-SMU_t57;Parent=gene-SMU_t57;gbkey=tRNA;locus_tag=SMU_t57;product=tRNA-Val
+AE014133.2	Genbank	rRNA	1683920	1684039	.	-	.	ID=rna-SMU_r10;Parent=gene-SMU_r10;gbkey=rRNA;locus_tag=SMU_r10;product=5S ribosomal RNA
+AE014133.2	Genbank	rRNA	1684220	1687120	.	-	.	ID=rna-SMU_r11;Parent=gene-SMU_r11;gbkey=rRNA;locus_tag=SMU_r11;product=23S ribosomal RNA
+AE014133.2	Genbank	tRNA	1687379	1687451	.	-	.	ID=rna-SMU_t58;Parent=gene-SMU_t58;gbkey=tRNA;locus_tag=SMU_t58;product=tRNA-Ala
+AE014133.2	Genbank	rRNA	1687509	1689060	.	-	.	ID=rna-SMU_r12;Parent=gene-SMU_r12;gbkey=rRNA;locus_tag=SMU_r12;product=16S ribosomal RNA
+AE014133.2	Genbank	tRNA	1873122	1873195	.	-	.	ID=rna-SMU_t59;Parent=gene-SMU_t59;gbkey=tRNA;locus_tag=SMU_t59;product=tRNA-Asn
+AE014133.2	Genbank	rRNA	1873197	1873316	.	-	.	ID=rna-SMU_r13;Parent=gene-SMU_r13;gbkey=rRNA;locus_tag=SMU_r13;product=5S ribosomal RNA
+AE014133.2	Genbank	rRNA	1873497	1876397	.	-	.	ID=rna-SMU_r14;Parent=gene-SMU_r14;gbkey=rRNA;locus_tag=SMU_r14;product=23S ribosomal RNA
+AE014133.2	Genbank	tRNA	1876656	1876728	.	-	.	ID=rna-SMU_t60;Parent=gene-SMU_t60;gbkey=tRNA;locus_tag=SMU_t60;product=tRNA-Ala
+AE014133.2	Genbank	rRNA	1876786	1878337	.	-	.	ID=rna-SMU_r15;Parent=gene-SMU_r15;gbkey=rRNA;locus_tag=SMU_r15;product=16S ribosomal RNA
+AE014133.2	Genbank	tRNA	1906607	1906677	.	+	.	ID=rna-SMU_t61;Parent=gene-SMU_t61;gbkey=tRNA;locus_tag=SMU_t61;product=tRNA-Cys
+AE014133.2	Genbank	tRNA	1930143	1930215	.	+	.	ID=rna-SMU_t62;Parent=gene-SMU_t62;gbkey=tRNA;locus_tag=SMU_t62;product=tRNA-Lys
+AE014133.2	Genbank	tRNA	2028186	2028259	.	-	.	ID=rna-SMU_t63;Parent=gene-SMU_t63;gbkey=tRNA;locus_tag=SMU_t63;product=tRNA-Asn
+AE014133.2	Genbank	tRNA	2028265	2028336	.	-	.	ID=rna-SMU_t64;Parent=gene-SMU_t64;gbkey=tRNA;locus_tag=SMU_t64;product=tRNA-Glu
+AE014133.2	Genbank	tRNA	2028677	2028750	.	+	.	ID=rna-SMU_t65;Parent=gene-SMU_t65;gbkey=tRNA;locus_tag=SMU_t65;product=tRNA-Arg

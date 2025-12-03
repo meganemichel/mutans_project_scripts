@@ -1,0 +1,110 @@
+MultiVCFAnalyzer - 0.87-alpha (2017-11-23)
+by Alexander Herbig
+
+Input files:
+Reference genome fasta file: /mnt/archgen/mutans/99-references/Smutans_UA159/GCA_000007465.2_ASM746v2_genomic.fasta
+Reference genome gene annotation (gff): /mnt/archgen/mutans/99-references/Smutans_UA159/GCA_000007465.2_ASM746v2_genomic.gff
+List of positions to exclude (gff): /mnt/archgen/mutans/99-references/Smutans_UA159/GCA_000007465.2_ASM746v2_regions2exclude_rRNA_tRNA.gff
+SNP effect analysis result file (from SnpEff): NA
+
+Output files:
+Output directory: ./multivcfAnalyzer_5x_het
+SNP alignment (fasta): ./multivcfAnalyzer_5x_het/snpAlignment.fasta
+SNP alignment including entry for reference genome (fasta): ./multivcfAnalyzer_5x_het/snpAlignmentIncludingRefGenome.fasta
+SNP table: ./multivcfAnalyzer_5x_het/snpTable.tsv
+SNP table with uncertainty calls: ./multivcfAnalyzer_5x_het/snpTableWithUncertaintyCalls.tsv
+SNP table to be used as input for SnpEff: ./multivcfAnalyzer_5x_het/snpTableForSnpEff.tsv
+SNP table to be used as input for STRUCTURE: ./multivcfAnalyzer_5x_het/structureGenotypes.tsv
+SNP table to be used as input for STRUCTURE (no columns with missing data): ./multivcfAnalyzer_5x_het/structureGenotypes_noMissingData-Columns.tsv
+SNP calling statistics: ./multivcfAnalyzer_5x_het/snpStatistics.tsv
+
+Parameters:
+Minimal genotyping quality (GATK): 30.0
+Minimal coverage for base call: 5
+Minimal allele frequency for homozygous call: 0.9
+Minimal allele frequency for heterozygous call: 0.1
+Write allele frequencies: true
+
+Additional notes:
+Reference genome name: AE014133.2 Streptococcus mutans UA159, complete genome
+Number of genomes (vcf files): 76
+Run started: 6 Nov 2025 18:06:14 GMT
+Run finished: 6 Nov 2025 18:11:22 GMT
+
+List of VCF files:
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/VEN018.A0102.SM1/VEN018.A0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/REV004.A0102.SM1/REV004.A0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/PRU003.A0102.SM1/PRU003.A0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/VET009.A0101.SM1/VET009.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/OBK010.A0101.SM1/OBK010.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/LOT001.A0201.SM1/LOT001.A0201.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/KIV007.A0101.SM1/KIV007.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A16566.SM1/XXX001.A16566.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161133.SM1/XXX001.A161133.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/SGA024.B0102.SM1/SGA024.B0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/REN010.A0102.SM1/REN010.A0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161176.SM1/XXX001.A161176.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161364.SM1/XXX001.A161364.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/KIV006.A0101.SM1/KIV006.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/FAR004.A0104.SM1/FAR004.A0104.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/VLI061.B0102.SM1/VLI061.B0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/VLI009.B0103.SM1/VLI009.B0103.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/IKI023.A0102.SM1/IKI023.A0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/TIT012.A0103.SM1/TIT012.A0103.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/EFA011.A0201.SM1/EFA011.A0201.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161241.SM1/XXX001.A161241.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161233.SM1/XXX001.A161233.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/FUT008.A0102.SM1/FUT008.A0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161116.SM1/XXX001.A161116.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A16575.SM1/XXX001.A16575.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161161.SM1/XXX001.A161161.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161239.SM1/XXX001.A161239.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A16571.SM1/XXX001.A16571.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161237.SM1/XXX001.A161237.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161358.SM1/XXX001.A161358.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/BOT005.A0101.SM1/BOT005.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161274.SM1/XXX001.A161274.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161155.SM1/XXX001.A161155.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/CMS002.A0201.SM1/CMS002.A0201.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/OSS001.A0101.SM1/OSS001.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/KPT003.A0101.SM1/KPT003.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161114.SM1/XXX001.A161114.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/CLL006.A0101.SM1/CLL006.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/ZAP001.A0201.SM1/ZAP001.A0201.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/EHU002.A0201.SM1/EHU002.A0201.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/TIL003.A0101.SM1/TIL003.A0101.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/SJN015.B0101.SM1/SJN015.B0101.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161110.SM1/XXX001.A161110.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/CCA002.B0201.SM1/CCA002.B0201.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161384.SM1/XXX001.A161384.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/KIV002.A0101.SM1/KIV002.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/ALA002.B0102.SM1/ALA002.B0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/MK5008.B0101.SM1/MK5008.B0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/GIN007.A0101.SM1/GIN007.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/SCA003.A0102.SM1/SCA003.A0102.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/CDL001.A0201.SM1/CDL001.A0201.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161183.SM1/XXX001.A161183.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/SJN032.A0101.SM1/SJN032.A0101.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161173.SM1/XXX001.A161173.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XAN005.A0102.SM1/XAN005.A0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/PVA001.A0101.SM1/PVA001.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/VIL009.A0102.SM1/VIL009.A0102.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/MMI002.A0201.SM1/MMI002.A0201.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161330.SM1/XXX001.A161330.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161123.SM1/XXX001.A161123.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/TON003.A0102.SM1/TON003.A0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/MIB002.A0102.SM1/MIB002.A0102.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/ALM029.A0101.SM1/ALM029.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161203.SM1/XXX001.A161203.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161166.SM1/XXX001.A161166.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/PLI001.A0101.SM1/PLI001.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161129.SM1/XXX001.A161129.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/VEK006.A0101.SM1/VEK006.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/DON004.A0101.SM1/DON004.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/OOH016.A0102.SM1/OOH016.A0102.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/GIN005.A0101.SM1/GIN005.A0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/PIE034.B0101.SM1/PIE034.B0101.SM1.1_S0_L005_R1_001.fastq_L5.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/PGL001.A0103.SM1/PGL001.A0103.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/XXX001.A161345.SM1/XXX001.A161345.SM1_R1_lanemerged.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/PAN049.A0101.SM1/PAN049.A0101.SM1.1_S0_L001_R1_001.fastq.pG.fq_L1.pe.combined.fq.unifiedgenotyper.vcf.gz
+/mnt/archgen/mutans/03-eager/production_UA159mapping/multivcfanalyzer/input/KGH-2B_merged/KGH2-B_merged.unifiedgenotyper.vcf.gz
