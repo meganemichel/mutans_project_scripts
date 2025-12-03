@@ -110,7 +110,7 @@ info_breath_coverage <- read.delim("../Data/probes_chipA_chipB_combined_rmdup.br
 info_depth_coverage <- read.delim("../Data/probes_chipA_chipB_combined_rmdup.depth",header = FALSE, col.names = c("Gene_roary","Start", "End", "Depth_coverage")) %>% select(Gene_roary, Depth_coverage)
 
 gene_presence_absence_csv <- read.csv(file = "../Data/gene_presence_absence.csv") %>%
-  gather(Genome, Gene_roary, 15:507) %>%
+  gather(Genome, Gene_roary, 15:505) %>%
   separate(Gene_roary, sep = "\t", c("Gene_roary","Gene_roary_duplicate", "Gene_roary_duplicate_2", "Gene_roary_duplicate_3", "Gene_roary_duplicate_4", "Gene_roary_duplicate_5", "Gene_roary_duplicate_6", "Gene_roary_duplicate_7", "Gene_roary_duplicate_8")) %>%
   filter(Gene_roary !="")
 
@@ -271,8 +271,12 @@ CoreAncient <- geneCountSpecies_90complete %>%
   filter(Gene %in% differingCoreGenes_90complete$Gene) %>%
   filter(Age == "Ancient" & GeneType == "Core genes")
 
-geneCountSpecies %>% filter(Gene %in% CoreAncient$Gene) %>% filter(Age == "Modern")
+nonCoreModern_CoreAncient <- geneCountSpecies %>% 
+  filter(Gene %in% CoreAncient$Gene) %>% 
+  filter(Age == "Modern")
 
+nonCoreModern_CoreAncient %>% left_join(gene_presence_absence_csv) %>% select(Gene,Avg.sequences.per.isolate,Annotation,Total,GeneType) %>% distinct() %>% write_delim(file = "../Data/nonCoreModern_CoreAncient.tsv", delim = "\t")
+  
 CoreModern <- geneCountSpecies_90complete %>%
   filter(Gene %in% differingCoreGenes_90complete$Gene) %>%
   filter(Age == "Modern" & GeneType == "Core genes") %>%
@@ -503,10 +507,12 @@ genesFoundOnly1method <- geneFound1methodGenome %>%
 #  labs(color = "Age", x = "Age", y = "Total gene count/genome") +
 #  theme_bw() +
 #  theme(axis.text.x = element_text(angle=45,hjust=1), 
-        legend.position="right")
+#        legend.position="right")
 
 ancient_breadth_depth_cov %>% filter(Gene %in% genesFoundOnly1method$Gene) %>% 
   left_join(geneCount %>% 
               select(Gene, GeneType)) %>%
   filter(GeneType == "Core genes")
+
+geneFound1methodGenome %>% filter(Type=="Ancient Mapping") %>% group_by(GeneType) %>% summarise(Total=n())
 ```
